@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stefanploskov.github.io/mamifad-packliste/sitemap.xml
