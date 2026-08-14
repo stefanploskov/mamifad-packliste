@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="de-AT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Familien-Ausflugs-Packliste | Mamifad</title>
+  <meta name="description" content="Kostenlose, lokale Packlisten-App von Mamifad: Wetter, Dauer und Alter wählen, individuelle Familien-Packliste erstellen, abhaken und drucken.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#16483c">
+  <link rel="canonical" href="https://stefanploskov.github.io/mamifad-packliste/">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Mamifad Familien-Ausflugs-Packliste",
+    "url": "https://stefanploskov.github.io/mamifad-packliste/",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Jeder moderne Browser",
+    "isAccessibleForFree": true,
+    "inLanguage": "de-AT",
+    "author": {
+      "@type": "Organization",
+      "name": "Mamifad",
+      "url": "https://www.mamifad.at/"
+    },
+    "description": "Eine lokal im Browser arbeitende Packlisten-App für Familienausflüge in Österreich."
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#packlisten-form">Direkt zur Packliste</a>
+
+  <header class="site-header">
+    <a class="brand" href="https://www.mamifad.at/" aria-label="Mamifad Startseite">
+      <svg class="brand-mark" viewBox="0 0 52 52" role="img" aria-label="Mamifad Wegmarke">
+        <path d="M8 38.5 22.5 10l7.2 14.2 4.9-8.4L45 38.5Z" fill="currentColor"/>
+        <path d="M17 38.5 26 22l4 7.8 3-5.1 7.5 13.8Z" fill="#f7c95c"/>
+        <circle cx="39" cy="12" r="5" fill="#ef6a42"/>
+      </svg>
+      <span><strong>Mamifad</strong><small>Familienzeit in Österreich</small></span>
+    </a>
+    <nav aria-label="Mamifad entdecken">
+      <a href="https://www.mamifad.at/events">Events</a>
+      <a href="https://www.mamifad.at/places">Orte</a>
+      <a href="https://www.mamifad.at/artikel">Magazin</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span>Werkzeug Nr. 04</span> Für spontane &amp; geplante Abenteuer</p>
+        <h1 id="page-title">Packen ohne<br><em>Kopfkino.</em></h1>
+        <p class="intro">Drei Angaben genügen. Mamifad baut daraus eine praktische Familien-Packliste, die wirklich zu eurem Ausflug passt.</p>
+        <ul class="trust-list" aria-label="Vorteile">
+          <li>Kein Konto</li>
+          <li>Keine Datensammlung</li>
+          <li>Funktioniert lokal</li>
+        </ul>
+      </div>
+
+      <div class="trail-card" aria-hidden="true">
+        <span class="trail-card__number">01</span>
+        <svg viewBox="0 0 260 180">
+          <path class="trail-line" d="M12 153c47-3 47-50 89-52 44-1 28-57 82-56 31 0 42-20 66-29"/>
+          <path class="trail-dash" d="M12 153c47-3 47-50 89-52 44-1 28-57 82-56 31 0 42-20 66-29"/>
+          <circle cx="13" cy="153" r="9"/>
+          <path d="m239 7 13 7-12 8 2-6Z"/>
+        </svg>
+        <p><strong>Startklar?</strong><br>Die beste Reserve ist ein guter Plan.</p>
+        <span class="stamp">von Mamifad</span>
+      </div>
+    </section>
+
+    <section class="planner" aria-labelledby="planner-title">
+      <div class="planner-heading">
+        <p class="section-number">01 / PLANEN</p>
+        <div>
+          <h2 id="planner-title">Drei Wegweiser zur passenden Liste</h2>
+          <p>Wählt die Situation, die am ehesten zu eurem Tag passt.</p>
+        </div>
+      </div>
+
+      <form id="packlisten-form" class="controls">
+        <label class="control-card">
+          <span class="control-icon" aria-hidden="true">☀</span>
+          <span class="control-copy"><b>Wetter</b><small>Was erwartet euch?</small></span>
+          <select id="weather" name="weather">
+            <option value="sun">Sonnig &amp; warm</option>
+            <option value="change">Wechselhaft</option>
+            <option value="rain">Regenwetter</option>
+            <option value="cold">Kühl &amp; winterlich</option>
+          </select>
+        </label>
+
+        <label class="control-card">
+          <span class="control-icon" aria-hidden="true">◷</span>
+          <span class="control-copy"><b>Dauer</b><small>Wie lange seid ihr weg?</small></span>
+          <select id="duration" name="duration">
+            <option value="short">Bis 2 Stunden</option>
+            <option value="half">Halber Tag</option>
+            <option value="full">Ganzer Tag</option>
+            <option value="overnight">Mit Übernachtung</option>
+          </select>
+        </label>
+
+        <label class="control-card">
+          <span class="control-icon" aria-hidden="true">✦</span>
+          <span class="control-copy"><b>Alter</b><small>Wer kommt mit?</small></span>
+          <select id="age" name="age">
+            <option value="baby">Baby &amp; Kleinkind</option>
+            <option value="kids" selected>Kindergarten &amp; Volksschule</option>
+            <option value="mixed">Gemischte Altersgruppe</option>
+            <option value="teens">Ältere Kinder &amp; Teens</option>
+          </select>
+        </label>
+
+        <button class="generate-button" type="submit">
+          <span>Packliste erstellen</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+      <p class="local-note"><span aria-hidden="true">⌁</span> Eure Auswahl bleibt auf diesem Gerät. Mamifad überträgt keine Eingaben.</p>
+    </section>
+
+    <section id="result" class="result" aria-labelledby="result-title">
+      <div class="result-heading">
+        <div>
+          <p class="section-number">02 / EINPACKEN</p>
+          <h2 id="result-title">Eure Ausflugs-Packliste</h2>
+          <p id="selection-summary" class="selection-summary"></p>
+        </div>
+        <div class="progress-wrap" aria-live="polite">
+          <div class="progress-ring" id="progress-ring" style="--progress: 0deg">
+            <span id="progress-number">0%</span>
+          </div>
+          <span id="progress-copy">Noch nichts abgehakt</span>
+        </div>
+      </div>
+
+      <div class="result-toolbar" aria-label="Listenaktionen">
+        <label class="open-only"><input id="open-only" type="checkbox"> Nur offene Punkte</label>
+        <div>
+          <button id="clear-button" class="text-button" type="button">Häkchen löschen</button>
+          <button id="print-button" class="print-button" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V4h10v5M7 18H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M7 14h10v7H7Z"/></svg>
+            Drucken
+          </button>
+        </div>
+      </div>
+
+      <div id="checklist" class="checklist"></div>
+      <p id="empty-open" class="empty-open" hidden><strong>Alles eingepackt!</strong> Ihr seid bereit für draußen.</p>
+    </section>
+
+    <aside class="next-adventure" aria-labelledby="next-title">
+      <div class="next-adventure__copy">
+        <p class="section-number">03 / LOSZIEHEN</p>
+        <h2 id="next-title">Die Tasche ist bereit.<br>Wohin geht’s?</h2>
+        <p>Findet familienfreundliche Veranstaltungen und Ausflugsziele in ganz Österreich.</p>
+      </div>
+      <div class="adventure-links">
+        <a href="https://www.mamifad.at/events"><span>Was ist los?</span><strong>Familien-Events</strong><b aria-hidden="true">↗</b></a>
+        <a href="https://www.mamifad.at/places"><span>Wohin geht’s?</span><strong>Ausflugsziele &amp; Orte</strong><b aria-hidden="true">↗</b></a>
+        <a href="https://www.mamifad.at/artikel"><span>Noch eine Idee?</span><strong>Tipps im Magazin</strong><b aria-hidden="true">↗</b></a>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <a class="footer-brand" href="https://www.mamifad.at/">Mamifad</a>
+    <p>Gemeinsame Zeit findet man nicht. Man macht sie.</p>
+    <p class="footer-small">Kostenloses Werkzeug für Familien in Österreich · Keine Cookies · Keine Tracker</p>
+  </footer>
+
+  <noscript><p class="noscript">Bitte JavaScript aktivieren, damit die Packliste lokal in deinem Browser erstellt werden kann.</p></noscript>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
